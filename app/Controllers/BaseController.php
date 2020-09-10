@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controllers;
 
 /**
@@ -15,6 +16,7 @@ namespace App\Controllers;
  */
 
 use CodeIgniter\Controller;
+use CodeIgniter\Session\Session;
 
 class BaseController extends Controller
 {
@@ -26,7 +28,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [];
+	protected $helpers = ['general','url','form'];
 
 	/**
 	 * Constructor.
@@ -41,6 +43,9 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
-	}
 
+		$this->session = \config\Services::session();
+		$validation =  \Config\Services::validation();
+
+	}
 }

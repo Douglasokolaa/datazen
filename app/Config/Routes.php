@@ -30,7 +30,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Courses::index');
+$routes->get('/', 'Home::index');
 $routes->get('/course/customer-service-specialist', 'Courses::customer_service');
 $routes->get('/course/data-analysis', 'Courses::data_analyst');
 $routes->get('/course/it-administrator', 'Courses::it_administrator');
@@ -40,6 +40,10 @@ $routes->get('/course/software-developer', 'Courses::software_developer');
 $routes->get('/learn', 'Courses::index');
 
 
+$routes->get('/login', 'authentication::login');
+$routes->post('/login', 'authentication::login');
+$routes->get('/register', 'authentication::registration');
+$routes->post('/register', 'authentication::registration');
 
 /**
  * --------------------------------------------------------------------
