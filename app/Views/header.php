@@ -59,12 +59,21 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="../../programs.html">Programs</a>
                                     </li> -->
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <a class="nav-link active" href="<?php echo base_url('/learn') ?>">Learn</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../../contact.html">Logout</a>
-                                    </li>
+                                    </li> -->
+                                    <?php if (is_logged_in()) { ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo base_url('/logout') ?>">Logout</a>
+                                        </li>
+                                    <?php } else { ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo base_url('/register') ?>">Register</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="<?php echo base_url('/login') ?>">Login</a>
+                                        </li>
+                                    <?php } ?>
                                 </ul>
                             </div>
                         </nav>
@@ -76,15 +85,15 @@
     <!-- Header End -->
 
     <nav aria-label="breadcrumb" style="padding-top: 70px;">
-    <ol class="breadcrumb">
-        <div class="container" style="padding: 0;">
-            <li><a class="learn-links orange-text" href="<?php echo base_url('/learn') ?>">Learn </a></li>
-            <li aria-current="page">/ <?php echo $title ?> </li>
-        </div>
-    </ol>
-</nav>
+        <ol class="breadcrumb">
+            <div class="container" style="padding: 0;">
+                <li><a class="learn-links orange-text" href="<?php echo base_url('/learn') ?>">Learn </a></li>
+                <li aria-current="page">/ <?php echo $title ?> </li>
+            </div>
+        </ol>
+    </nav>
 
-<!-- <div class="text-left iq-breadcrumb-one iq-bg-over black banner-images parallax"
+    <!-- <div class="text-left iq-breadcrumb-one iq-bg-over black banner-images parallax"
         style="background-image: url(../../images/learn.jpg)">
         <div class="container ">
             <div class="row">
@@ -100,4 +109,3 @@
             </div>
         </div>
     </div> -->
-

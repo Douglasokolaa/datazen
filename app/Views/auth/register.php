@@ -7,7 +7,17 @@ init_head($title);
         <div class="container">
             <div class="row">
                 <div class="col-md-8 offset-2" id="learn-register">
-                    <?php echo form_open('',['id' => 'contact-form']) ?>
+                    <!-- Status message -->
+
+                    <?php if (isset($error_msg)) { ?>
+                        <div class="alert alert-danger">
+                            <?php echo $error_msg->listErrors() ?>
+                        </div>
+                    <?php } ?>
+
+
+                    <!-- form -->
+                    <?php echo form_open('', ['id' => 'contact-form']) ?>
                     <h4 class="mb-2 text-center">Welcome to Datazen Learn.</h4>
                     <h6 class="mb-2 text-center">Please fill out the following details.</h6>
                     <div class="row">

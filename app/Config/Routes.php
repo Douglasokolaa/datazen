@@ -44,6 +44,7 @@ $routes->get('/login', 'authentication::login');
 $routes->post('/login', 'authentication::login');
 $routes->get('/register', 'authentication::registration');
 $routes->post('/register', 'authentication::registration');
+$routes->get('/logout', 'authentication::logout');
 
 /**
  * --------------------------------------------------------------------

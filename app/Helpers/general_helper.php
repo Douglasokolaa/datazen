@@ -12,8 +12,7 @@ function init_footer() {
 
 function is_logged_in()
 {
-    $CI =&get_instance();
-    if ($CI->session->get('isUserLoggedIn')) {
+    if (session()->get('logged_in')) {
         return true;
     } else {
         return false;

@@ -5,19 +5,23 @@ init_head($title);
 <div class="main-content overflow-hidden">
     <div>
         <div class="container">
-            <div class="row">
+            <div class="col-md-4 offset-md-4 my-4" id="learn-register">
+                <div class="row">
+                    <!-- Status message -->
+                    <div class="alert text-center">
+                        <?php
+                        if (isset($error_msg) || session()->get('error_msg')) { ?>
+                            <div class="alert alert-danger text-center">
+                                <?= $error_msg ?? session()->get('error_msg') ?>
+                            </div>
+                        <?php } ?>
 
-                <!-- Status message -->
-                <div class="text-center">
-                    <?php
-                    if (!empty($success_msg)) {
-                        echo '<p class="status-msg success">' . $success_msg . '</p>';
-                    } elseif (!empty($error_msg)) {
-                        echo '<p class="status-msg error">' . $error_msg . '</p>';
-                    }
-                    ?>
-                </div>
-                <div class="col-md-4 offset-md-4 my-4" id="learn-register">
+                        <?php if (session()->get('success')) { ?>
+                            <div class="alert alert-success">
+                                <?php echo session()->get('success'); ?>
+                            </div>
+                        <?php } ?>
+                    </div>
                     <?php echo form_open(base_url('/login'), ['id' => 'contact-form']) ?>
                     <h4 class="mb-2 text-center">Welcome Back</h4>
                     <div class="row">
@@ -33,7 +37,7 @@ init_head($title);
 
                         <div class="col-lg-12 text-center">
                             <button class="button sign-btn org-btn send-contact w-100" id="disableBtn">
-                                Register</button>
+                                Login</button>
                         </div>
                         <div style="margin-top: 5px; margin-left: 40%;">
                             <span class="contact-confirm-msg text-primary">Registeration Successful!</span>

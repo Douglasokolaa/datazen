@@ -6,8 +6,14 @@ class Courses extends BaseController
 {
 
   protected $data = [];
+
   public function __construct()
   {
+    helper('general');
+    if (!is_logged_in()) {
+      session()->setFlashData('error_msg', 'You Must Login first');
+      return redirect()->to('logout');
+    }
   }
 
   public function index()
@@ -48,7 +54,7 @@ class Courses extends BaseController
 
   public function software_developer()
   {
-    
+
     $this->data['title'] = 'Software Devloper';
     return view('learn/software_developer', $this->data);
   }
