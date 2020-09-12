@@ -45,7 +45,7 @@ $routes->group('course', ['filter' => 'auth'], function ($routes) {
 
 $routes->match(['get', 'post'], '/login', 'authentication::login',['filter' => 'noauth']);
 $routes->match(['get', 'post'], '/register', 'authentication::registration',['filter' => 'noauth']);
-$routes->get('/logout', 'authentication::logout',['filter' => 'noauth']);
+$routes->get('/logout', 'authentication::logout',['filter' => 'auth']);
 
 /**
  * --------------------------------------------------------------------

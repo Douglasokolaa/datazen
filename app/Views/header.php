@@ -89,8 +89,14 @@
                 <div class="container" style="padding: 0;">
                     <li><a class="learn-links orange-text" href="<?php echo base_url('/dashboard') ?>">Learn </a></li>
                     <li aria-current="page">/ <?php echo $title ?> </li>
+                    <?php if (isset($progress) && $progress['value'] > 0) { ?>
+                        <div class="progress mt-2" style="height:30px;">
+                            <div class="progress-bar" style="width: 75%;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75% progress</div>
+                        </div>
+                    <?php } ?>
                 </div>
             </ol>
+
         <?php } ?>
     </nav>
 

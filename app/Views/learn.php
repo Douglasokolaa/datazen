@@ -69,7 +69,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4">
-                            <a href="<?php echo base_url('/course/it-support-specialist') ?>" rel="noopener noreferrer" class="learn-links orange-text">
+                            <a href="<?php echo base_url('/course/customer-service-specialist') ?>" rel="noopener noreferrer" class="learn-links orange-text">
                                 Start Learning
                             </a>
                         </div>
