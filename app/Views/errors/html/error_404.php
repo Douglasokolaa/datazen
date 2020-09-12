@@ -73,11 +73,14 @@
 		<h1>404 - File Not Found</h1>
 
 		<p>
-			<?php if (! empty($message) && $message !== '(null)') : ?>
-				<?= esc($message) ?>
-			<?php else : ?>
+			<?php 
+			// if (! empty($message) && $message !== '(null)') : ?>
+				<!-- <?= esc($message) ?> -->
+			<?php
+			//  else : ?>
 				Sorry! Cannot seem to find the page you were looking for.
-			<?php endif ?>
+			<?php
+			//  endif ?>
 		</p>
 	</div>
 </body>

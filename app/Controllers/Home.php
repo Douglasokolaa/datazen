@@ -4,7 +4,7 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('learn',['title' => 'Register']);
+		return view('auth/login',['title' => 'Login']);
 	}
 
 	//--------------------------------------------------------------------

@@ -2,10 +2,10 @@
 defined('APPPATH') or exit('No direct script access allowed');
 init_head($title);
 ?>
-<div class="main-content overflow-hidden">
+<div class="main-content overflow-hidden mb-3">
     <div>
         <div class="container">
-            <div class="col-md-4 offset-md-4 my-4" id="learn-register">
+            <div class="col-md-4 offset-md-4 my-5" id="learn-register">
                 <div class="row">
                     <!-- Status message -->
                     <div class="alert text-center">
@@ -61,6 +61,5 @@ init_head($title);
         </div>
         <!-- loading End -->
     </div>
-</div>
 </div>
 <?php init_footer() ?>

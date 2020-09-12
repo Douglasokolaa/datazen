@@ -2,7 +2,7 @@
     <h5 class="text-white text-center">Subscribe to our newsletter</h5>
     <br>
     <form id="jquery_form" class="footer-input text-center">
-        <input type="email" name="emailDetails" class="m-0" placeholder="Enter email address" style="" required />
+        <input type="email" name="emailDetails" class="m-0" placeholder="Enter email address" required />
         <button type="submit" name="send" class="button sign-btn org-btn mt-1" id="disableBtn">
             <span class="loaderspinner"><i class="fa fa-spinner fa-spin"></i></span>
             Subscribe</button>

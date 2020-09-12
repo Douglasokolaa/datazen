@@ -12,7 +12,7 @@ function init_footer() {
 
 function is_logged_in()
 {
-    if (session()->get('logged_in')) {
+    if (session()->get('logged_in') == 1) {
         return true;
     } else {
         return false;

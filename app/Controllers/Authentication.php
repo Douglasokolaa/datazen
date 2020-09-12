@@ -16,55 +16,29 @@ class Authentication extends BaseController
         $this->user = new User();
 
         // User login status 
-        $this->isUserLoggedIn = $this->session->get('isUserLoggedIn');
+        $this->isUserLoggedIn = $this->session->get('isUserLoggedIn') == 1 ? true : false;
     }
 
     public function index()
     {
-        if (is_logged_in()) {
-            return redirect()->to('learn');
-        }
-
-        if ($this->isUserLoggedIn) {
-            redirect(base_url('/account'));
-        } else {
-            redirect(base_url('/login'));
-        }
+        return redirect()->to('dashboard');
     }
 
     public function account()
     {
         $data = array();
-        if ($this->isUserLoggedIn) {
-            $con = array(
-                'id' => $this->session->get('userId')
-            );
-            $data['user'] = $this->user->getRows($con);
+        $con = array(
+            'id' => $this->session->get('userId')
+        );
+        $data['user'] = $this->user->getRows($con);
 
-            // Pass the user data and load view 
-            return view('account', $data);
-        } else {
-            redirect('users/login');
-        }
+        // Pass the user data and load view 
+        return view('account', $data);
     }
 
     public function login()
     {
-        if (is_logged_in()) {
-            return redirect()->to('learn');
-        }
-
         $data = array();
-
-        // Get messages from the session 
-        if ($this->session->get('success_msg')) {
-            $data['success_msg'] = $this->session->get('success_msg');
-            $this->session->remove('success_msg');
-        }
-        if ($this->session->get('error_msg')) {
-            $data['error_msg'] = $this->session->get('error_msg');
-            $this->session->remove('error_msg');
-        }
 
         // If login request submitted 
         if ($this->request->getPost()) {
@@ -81,7 +55,6 @@ class Authentication extends BaseController
                 $user = $model->where('email', $this->request->getVar('email'))->first();
 
                 $this->setUser($user);
-
                 return redirect()->to('learn');
             }
         }
@@ -93,10 +66,6 @@ class Authentication extends BaseController
 
     private function setUser($user)
     {
-        if (is_logged_in()) {
-            return redirect()->to('learn');
-        }
-
         $data = [
             'id' => $user['id'],
             'name' => $user['name'],
@@ -164,7 +133,7 @@ class Authentication extends BaseController
         $this->session->remove('name');
         $this->session->remove('email');
         $this->session->destroy();
-        
+
         return redirect()->to('login');
     }
 }

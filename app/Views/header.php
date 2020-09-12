@@ -48,7 +48,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto justify-content-end" id="nav-ul" style="width: 98%;">
                                     <!-- <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('/learn') ?>">Home</a>
+                                        <a class="nav-link" href="<?php echo base_url('/dashboard') ?>">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="../../about.html">About us</a>
@@ -59,19 +59,19 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="../../programs.html">Programs</a>
                                     </li> -->
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link active" href="<?php echo base_url('/learn') ?>">Learn</a>
-                                    </li> -->
                                     <?php if (is_logged_in()) { ?>
+                                        <li class="nav-item">
+                                            <a class="nav-link  <?php if (service('uri')->getSegment(1) != 'dashboard') echo 'active' ?>" href="<?php echo base_url('/profile') ?>">Profile</a>
+                                        </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?php echo base_url('/logout') ?>">Logout</a>
                                         </li>
                                     <?php } else { ?>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo base_url('/register') ?>">Register</a>
+                                            <a class="nav-link <?php if (service('uri')->getSegment(1) != 'register') echo 'active' ?>" href="<?php echo base_url('/register') ?>">Register</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo base_url('/login') ?>">Login</a>
+                                            <a class="nav-link  <?php if (service('uri')->getSegment(1) != 'login') echo 'active' ?>" href="<?php echo base_url('/login') ?>">Login</a>
                                         </li>
                                     <?php } ?>
                                 </ul>
@@ -83,14 +83,15 @@
         </header>
     </div>
     <!-- Header End -->
-
     <nav aria-label="breadcrumb" style="padding-top: 70px;">
-        <ol class="breadcrumb">
-            <div class="container" style="padding: 0;">
-                <li><a class="learn-links orange-text" href="<?php echo base_url('/learn') ?>">Learn </a></li>
-                <li aria-current="page">/ <?php echo $title ?> </li>
-            </div>
-        </ol>
+        <?php if (is_logged_in() && service('uri')->getSegment(1) != 'dashboard') { ?>
+            <ol class="breadcrumb">
+                <div class="container" style="padding: 0;">
+                    <li><a class="learn-links orange-text" href="<?php echo base_url('/dashboard') ?>">Learn </a></li>
+                    <li aria-current="page">/ <?php echo $title ?> </li>
+                </div>
+            </ol>
+        <?php } ?>
     </nav>
 
     <!-- <div class="text-left iq-breadcrumb-one iq-bg-over black banner-images parallax"
