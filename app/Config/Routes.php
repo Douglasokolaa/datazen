@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'authentication::login',['filter' => 'noauth']);
 $routes->get('/dashboard', 'Courses::index',['filter' => 'auth']);
+$routes->get('/view-course/(:num)/(:num)', 'Home::view/$1/$2',['filter' => 'auth']);
 
 $routes->group('course', ['filter' => 'auth'], function ($routes) {
 	$routes->get('customer-service-specialist', 'Courses::customer_service');

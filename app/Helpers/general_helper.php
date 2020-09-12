@@ -18,3 +18,8 @@ function is_logged_in()
         return false;
     }
 }
+
+function get_logged_in_user_id()
+{
+    return session()->get('userid');
+}

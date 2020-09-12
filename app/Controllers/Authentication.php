@@ -55,7 +55,7 @@ class Authentication extends BaseController
                 $user = $model->where('email', $this->request->getVar('email'))->first();
 
                 $this->setUser($user);
-                return redirect()->to('learn');
+                return redirect()->to('dashboard');
             }
         }
 
@@ -67,7 +67,7 @@ class Authentication extends BaseController
     private function setUser($user)
     {
         $data = [
-            'id' => $user['id'],
+            'userid' => $user['id'],
             'name' => $user['name'],
             'email' => $user['email'],
             'logged_in' => 1,
