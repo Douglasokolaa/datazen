@@ -17,7 +17,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/programming-foundations-fundamentals-3?trk=li-softwaredev-programfundamentals-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                            <a href="<?= course_url($modules[0]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -33,7 +33,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/programming-foundations-databases-2?trk=li-softwaredev-programdatabases-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[1]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -50,7 +50,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/succeeding-in-web-development-full-stack-and-front-end?trk=li-softwaredev-webdev-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[2]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -67,7 +67,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/html-essential-training-4?trk=li-softwaredev-html-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[3]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -85,7 +85,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/css-essential-training-3?trk=li-softwaredev-css-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[4]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -103,7 +103,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/javascript-essential-training-3?trk=li-softwaredev-javascript-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[5]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -121,7 +121,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/learning-python-2?trk=li-softwaredev-python-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[6]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -139,7 +139,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/learning-sql-programming?trk=li-softwaredev-sql-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[7]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>

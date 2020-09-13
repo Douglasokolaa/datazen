@@ -16,7 +16,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-1-the-basics?trk=li-itsupport-certprep1-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[0]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -32,7 +32,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-2-microprocessing-and-ram?trk=li-itsupport-certprep2-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[1]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -48,7 +48,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-3-core-hardware?trk=li-itsupport-certprep3-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[2]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -64,7 +64,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-4-storage-and-peripherals?trk=li-itsupport-certprep4-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[3]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -80,7 +80,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-5-display-technologies?trk=li-itsupport-certprep5-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[4]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -96,7 +96,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-6-physical-networking?trk=li-itsupport-certprep6-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[5]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -112,7 +112,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-7-understanding-networking?trk=li-itsupport-certprep7-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[6]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -128,7 +128,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/comptia-a-plus-220-1001-cert-prep-8-internet-and-the-cloud?trk=li-itsupport-certprep8-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[7]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>

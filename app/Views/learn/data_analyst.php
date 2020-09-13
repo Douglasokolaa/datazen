@@ -17,7 +17,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/learning-data-analytics-2?trk=li-data-dataanalytics-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[0]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -33,7 +33,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/data-fluency-exploring-and-describing-data?trk=li-data-datafluency-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[1]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -49,7 +49,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/excel-statistics-essential-training-1-2?trk=li-data-excelstatistics-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[2]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -65,7 +65,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/learning-excel-data-analysis-2?trk=li-data-learnexcel-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[3]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -79,7 +79,7 @@ init_head($title);
                             <p class="mb-5">Communicate complex ideas quickly and thoroughly with data visualization. Turn information into artwork and intrigue your audience.</p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/learning-data-visualization-3?trk=li-data-datavisual-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[4]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -95,7 +95,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/power-bi-essential-training-3?trk=li-data-powerbi-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[5]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -111,7 +111,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/tableau-essential-training-2020-1?trk=li-data-tableau-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[6]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>

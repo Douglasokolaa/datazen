@@ -16,7 +16,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/customer-service-foundations-2?trk=li-customerservice-foundations-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[0]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -32,7 +32,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/customer-service-problem-solving-and-troubleshooting?trk=li-customerservice-probsolving-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[1]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -48,7 +48,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/building-rapport-with-customers?trk=li-customerservice-rapport-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                        <a href="<?= course_url($modules[2]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -64,7 +64,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/customer-service-call-control-strategies?trk=li-customerservice-callcontrol-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[3]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -80,7 +80,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/customer-service-handling-abusive-customers?trk=li-customerservice-abcustomer-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[4]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -96,7 +96,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/creating-positive-conversations-with-challenging-customers?trk=li-customerservice-positiveconvo-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[5]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -112,7 +112,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/de-escalating-intense-situations?trk=li-customerservice-deescalate-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[6]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -128,7 +128,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="watch-link">
-                            <a href="https://www.linkedin.com/learning/customer-service-serving-customers-through-chat-and-text?trk=li-customerservice-chat-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                        <a href="<?= course_url($modules[7]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>

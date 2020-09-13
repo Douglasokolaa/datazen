@@ -91,7 +91,7 @@ class Courses extends BaseController
     $total_viewed = count($viewed_courses);
     $percentage = (float) (($total_viewed / $total_modules) * 100);
 
-    $this->data['progress']['value'] = $total_viewed + 25;
-    $this->data['progress']['percentage'] = $percentage + 25;
+    $this->data['progress']['value'] = $total_viewed;
+    $this->data['progress']['percentage'] = $percentage;
   }
 }

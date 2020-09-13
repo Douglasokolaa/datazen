@@ -16,7 +16,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/prepare-yourself-for-a-career-in-sales-2?trk=li-salesrep-prepare-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                            <a href="<?= course_url($modules[0]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -32,7 +32,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/sales-foundations?trk=li-salesrep-foundations-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                            <a href="<?= course_url($modules[1]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -48,7 +48,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-4 watch-link">
-                            <a href="https://www.linkedin.com/learning/asking-great-sales-questions-5?trk=li-salesrep-salesqa-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
+                            <a href="<?= course_url($modules[2]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -64,7 +64,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/soft-skills-for-sales-professionals?trk=li-salesrep-softskills-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                            <a href="<?= course_url($modules[3]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -80,7 +80,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/sales-handling-objections?trk=li-salesrep-objections-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                            <a href="<?= course_url($modules[4]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -96,7 +96,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/sales-negotiation?trk=li-salesrep-negotiation-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                            <a href="<?= course_url($modules[5]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -112,7 +112,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/sales-closing-strategies?trk=li-salesrep-closing-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                            <a href="<?= course_url($modules[6]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
@@ -128,7 +128,7 @@ init_head($title);
                             </p>
                         </div>
                         <div class="mt-5 watch-link">
-                            <a href="https://www.linkedin.com/learning/selling-with-stories-part-2-stories-great-sales-people-tell?trk=li-salesrep-stories-en&src=re-other&veh=127.0.0.1%7Cre-other" target="_blank" rel="noopener noreferrer" class="learn-links orange-text mt-5">
+                            <a href="<?= course_url($modules[7]) ?>" target="_blank" rel="noopener noreferrer" class="learn-links orange-text">
                                 Watch Course
                             </a>
                         </div>
