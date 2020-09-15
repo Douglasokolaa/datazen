@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\CoursesModel;
 use App\Models\ModulesModel;
 use App\Models\User;
 use App\Models\ViewsModel;
@@ -49,17 +50,27 @@ class Home extends BaseController
 			return redirect()->to('/logout');
 		}
 		$data['user'] = $user;
+		$data['courses'] = $this->progress();
 
 		return view('profile', $data);
 	}
 
-	protected function prepare_data($course_id)
+	protected function progress()
 	{
+		$result = [];
 
-		$_modules = new ModulesModel();
-		$this->data['modules'] = $_modules->where('course_id', $course_id)->findAll();
-		$total_modules = count($this->data['modules']);
-		$this->check_progress($course_id, $total_modules);
+		$model = new CoursesModel();
+		$courses = $model->findAll();
+		foreach ($courses as $id => $course) {
+			$result[$id] = $course;
+			$_modules = new ModulesModel();
+			$modules =  $_modules->where('course_id', $course['id'])->findAll();
+			$total_modules = count($modules);
+			$progress = $this->check_progress($course['id'], $total_modules);
+			$result[$id] = array_merge($result[$id], $progress);
+		}
+
+		return $result;
 	}
 
 	protected function check_progress($course_id, $total_modules)
@@ -75,7 +86,9 @@ class Home extends BaseController
 		$total_viewed = count($viewed_courses);
 		$percentage = (float) (($total_viewed / $total_modules) * 100);
 
-		$this->data['progress']['value'] = $total_viewed;
-		$this->data['progress']['percentage'] = $percentage;
+		$data['progress_value'] = $total_viewed;
+		$data['progress_percentage'] = $percentage;
+
+		return $data;
 	}
 }
