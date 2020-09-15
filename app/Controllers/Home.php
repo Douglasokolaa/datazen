@@ -46,12 +46,17 @@ class Home extends BaseController
 		$model = new User();
 		$user = $model->find($id);
 
+		$model->save([
+			'id' => $user['id'],
+			'name' => 'John Smith Jr',
+		]);
+
 		if (!$user) {
 			return redirect()->to('/logout');
 		}
 		$data['user'] = $user;
 		$data['courses'] = $this->progress();
-
+		$data['title']	 = 'Profile';
 		return view('profile', $data);
 	}
 

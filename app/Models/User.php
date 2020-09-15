@@ -10,6 +10,8 @@ class User extends Model
 {
     protected $table = 'users';
     protected $primaryKey = 'id';
+    protected $useTimestamps = true;
+    // protected $dateFormat = 'DATETIME';
     protected $createdField = 'created';
     protected $updatedField = 'modified';
     protected $allowedFields = [

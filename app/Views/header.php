@@ -34,7 +34,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="<?php echo base_url('/') ?>">
+                            <a class="navbar-brand" href="<?php echo is_logged_in() ? base_url('/') : 'https://datazen.online' ?>">
                                 <img class="img-fluid" src="../../images/datazen/data-zen-logo.png" alt="img">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,31 +47,19 @@
                             </button>
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav mr-auto justify-content-end" id="nav-ul" style="width: 98%;">
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link" href="<?php echo base_url('/dashboard') ?>">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../../about.html">About us</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../../products.html">Products & Solutions</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="../../programs.html">Programs</a>
-                                    </li> -->
                                     <?php if (is_logged_in()) { ?>
                                         <li class="nav-item">
-                                            <a class="nav-link  <?php if (service('uri')->getSegment(1) != 'dashboard') echo 'active' ?>" href="<?php echo base_url('/profile') ?>">Profile</a>
+                                            <a class="nav-link  <?php if (service('uri')->getSegment(1) == 'profile') echo 'active' ?>" href="<?php echo base_url('/profile') ?>">Profile</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="<?php echo base_url('/logout') ?>">Logout</a>
                                         </li>
                                     <?php } else { ?>
                                         <li class="nav-item">
-                                            <a class="nav-link <?php if (service('uri')->getSegment(1) != 'register') echo 'active' ?>" href="<?php echo base_url('/register') ?>">Register</a>
+                                            <a class="nav-link <?php if (service('uri')->getSegment(1) == 'register') echo 'active' ?>" href="<?php echo base_url('/register') ?>">Register</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link  <?php if (service('uri')->getSegment(1) != 'login') echo 'active' ?>" href="<?php echo base_url('/login') ?>">Login</a>
+                                            <a class="nav-link  <?php if (service('uri')->getSegment(1) == 'login') echo 'active' ?>" href="<?php echo base_url('/login') ?>">Login</a>
                                         </li>
                                     <?php } ?>
                                 </ul>
