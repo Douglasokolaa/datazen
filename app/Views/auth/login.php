@@ -35,9 +35,16 @@ init_head($title);
                             <i class="fa fa-spinner fa-spin fa-3x fa-fw mx-auto" id="register-loading"></i>
                             </div> -->
 
-                        <div class="col-lg-12 text-center">
-                            <button class="button sign-btn org-btn send-contact w-100" id="disableBtn">
-                                Login</button>
+                        <div class="col-lg-12 ">
+                            <button class="button text-center sign-btn org-btn send-contact w-100" id="disableBtn">
+                                Login
+                            </button>
+                            <div class="inline-row mt-2">
+                                Do Not have an Account? <a href="<?= base_url('/register'); ?>">Register</a>
+                            </div>
+                            <div class="inline-row mt-2">
+                                <a href="<?= base_url('/forgot-password'); ?>">Forgot Password?</a>
+                            </div>
                         </div>
                         <div style="margin-top: 5px; margin-left: 40%;">
                             <span class="contact-confirm-msg text-primary">Registeration Successful!</span>

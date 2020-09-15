@@ -13,7 +13,7 @@ class User extends Model
     protected $createdField = 'created';
     protected $updatedField = 'modified';
     protected $allowedFields = [
-        'email', 'password', 'name', 'phone', 'organization', 'course', 'hours', 'status', 'pass_reset_token'
+        'email', 'password', 'name', 'phone', 'organization', 'course', 'hours', 'status', 'pass_reset_token', 'verify_token'
     ];
 
     protected $beforeInsert = ['beforeInsert'];

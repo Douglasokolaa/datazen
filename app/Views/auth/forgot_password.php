@@ -22,9 +22,9 @@ init_head($title);
                             </div>
                         <?php } ?>
                     </div>
-                    <?php echo form_open(base_url('/login'), ['id' => 'contact-form']) ?>
-                    <h4 class="mb-2 text-center">Welcome Back</h4>
-                    <div class="row">
+                    <?php echo form_open(base_url('/forgot-password'), ['id' => 'contact-form']) ?>
+                    <h4 class="mb-2 text-center">Reset Password</h4>
+                    <div class="row mt-2">
                         <div class="col-lg-12">
                             <input type="email" name="email" class="pop-up-form-fields" id="inputEmail" placeholder="Your Email" required>
                         </div>

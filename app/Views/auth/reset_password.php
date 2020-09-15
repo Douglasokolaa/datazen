@@ -8,10 +8,10 @@ init_head($title);
             <div class="col-md-4 offset-md-4 my-5" id="learn-register">
                 <div class="row">
                     <!-- Status message -->
-                    <div class="alert text-center">
+                    <div class="">
                         <?php
                         if (isset($error_msg) || session()->get('error_msg')) { ?>
-                            <div class="alert alert-danger text-center">
+                            <div class="alert alert-danger ">
                                 <?= $error_msg ?? session()->get('error_msg') ?>
                             </div>
                         <?php } ?>
@@ -22,28 +22,19 @@ init_head($title);
                             </div>
                         <?php } ?>
                     </div>
-                    <?php echo form_open(base_url('/login'), ['id' => 'contact-form']) ?>
-                    <h4 class="mb-2 text-center">Welcome Back</h4>
-                    <div class="row">
+                    <?php echo form_open('', ['id' => 'contact-form']) ?>
+                    <h4 class="mb-2 text-center">Reset Password</h4>
+                    <div class="row mt-2">
                         <div class="col-lg-12">
-                            <input type="email" name="email" class="pop-up-form-fields" id="inputEmail" placeholder="Your Email" required>
+                            <input type="password" name="password" class="pop-up-form-fields" id="inputEmail" placeholder="Enter New Password" required>
                         </div>
                         <div class="col-lg-12">
-                            <input type="password" class="pop-up-form-fields" name="password" placeholder="Password">
+                            <input type="password_confirm" name="password_confirm" class="pop-up-form-fields" id="inputEmail" placeholder="Confirm New Password" required>
                         </div>
-                        <!-- <div class="col-lg-12 text-center">
-                            <i class="fa fa-spinner fa-spin fa-3x fa-fw mx-auto" id="register-loading"></i>
-                            </div> -->
 
                         <div class="col-lg-12 text-center">
                             <button class="button sign-btn org-btn send-contact w-100" id="disableBtn">
-                                Login</button>
-                        </div>
-                        <div style="margin-top: 5px; margin-left: 40%;">
-                            <span class="contact-confirm-msg text-primary">Registeration Successful!</span>
-                            <span class="contact-err-msg text-danger">Error Sending Message. Try
-                                Again!</span>
-                            <span class="contact-validation text-danger">Kindly Fill all Fields</span>
+                                Reset Password</button>
                         </div>
                     </div>
                     </form>
