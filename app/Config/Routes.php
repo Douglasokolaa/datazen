@@ -31,7 +31,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'authentication::login', ['filter' => 'noauth']);
+$routes->get('/', 'Authentication::login', ['filter' => 'noauth']);
 $routes->get('/dashboard', 'Courses::index', ['filter' => 'auth']);
 $routes->get('/profile', 'Home::profile', ['filter' => 'auth']);
 $routes->get('/view-course/(:num)/(:num)', 'Home::view/$1/$2', ['filter' => 'auth']);
@@ -45,13 +45,13 @@ $routes->group('course', ['filter' => 'auth'], function ($routes) {
 	$routes->get('software-developer', 'Courses::software_developer');
 });
 
-$routes->match(['get', 'post'], '/login', 'authentication::login', ['filter' => 'noauth']);
-$routes->match(['get', 'post'], '/register', 'authentication::registration', ['filter' => 'noauth']);
-$routes->get('/logout', 'authentication::logout', ['filter' => 'auth']);
-$routes->match(['get', 'post'], '/forgot-password', 'authentication::forgot', ['filter' => 'noauth']);
-$routes->match(['get', 'post'],'/reset-password/(:any)', 'authentication::reset/$1', ['filter' => 'noauth']);
-$routes->get('/verify/(:any)', 'authentication::verify/$1', ['filter' => 'noauth']);
-$routes->get('/resend/(:any)/(:any)', 'authentication::resend_link/$1/$2', ['filter' => 'noauth']);
+$routes->match(['get', 'post'], '/login', 'Authentication::login', ['filter' => 'noauth']);
+$routes->match(['get', 'post'], '/register', 'Authentication::registration', ['filter' => 'noauth']);
+$routes->get('/logout', 'Authentication::logout', ['filter' => 'auth']);
+$routes->match(['get', 'post'], '/forgot-password', 'Authentication::forgot', ['filter' => 'noauth']);
+$routes->match(['get', 'post'],'/reset-password/(:any)', 'Authentication::reset/$1', ['filter' => 'noauth']);
+$routes->get('/verify/(:any)', 'Authentication::verify/$1', ['filter' => 'noauth']);
+$routes->get('/resend/(:any)/(:any)', 'Authentication::resend_link/$1/$2', ['filter' => 'noauth']);
 
 /**
  * --------------------------------------------------------------------
