@@ -23,7 +23,7 @@ class Courses extends BaseController
 
   public function index()
   {
-    $this->data['title'] = '';
+    $this->data['title'] = 'Dashboard';
     return view('learn', $this->data);
   }
 

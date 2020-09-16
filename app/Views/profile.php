@@ -8,6 +8,22 @@ init_head($title);
     <section id="">
         <div class="container">
             <div class="row">
+                <div class="col-12">
+                    <?php
+                    if (isset($error_msg)) { ?>
+                        <div class="alert alert-danger alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <?= $error_msg->listErrors() ?>
+                        </div>
+                    <?php } ?>
+
+                    <?php if (isset($success)) { ?>
+                        <div class="alert alert-success alert-dismissible">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <?php echo $success; ?>
+                        </div>
+                    <?php } ?>
+                </div>
                 <div class="col-md-6 order-md-2 mb-4">
                     <h4 class="mb-3">Learning Progress</h4>
                     <ul class="list-group mb-3">
@@ -30,16 +46,16 @@ init_head($title);
                     <?php echo form_open('', ['id' => 'contact-form', 'class' => 'form-group']) ?>
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" value="<?= $user['name']?>" name="name" class="pop-up-form-fields" id="inputName" disabled placeholder="Your Name">
+                            <input type="text" value="<?= $user['name'] ?>" name="name" class="pop-up-form-fields" id="inputName" disabled placeholder="Your Name">
                         </div>
                         <div class="col-md-12">
-                            <input type="email" value="<?= $user['email']?>" name="email" class="pop-up-form-fields" id="inputEmail" disabled placeholder="Your Email" required>
+                            <input type="email" value="<?= $user['email'] ?>" name="email" class="pop-up-form-fields" id="inputEmail" disabled placeholder="Your Email" required>
                         </div>
                         <div class="col-md-12">
-                            <input type="tel" value="<?= $user['phone']?>" name="phone" class="pop-up-form-fields" id="inputPhone" placeholder="Your Phone Number" required>
+                            <input type="tel" value="<?= $user['phone'] ?>" name="phone" class="pop-up-form-fields" id="inputPhone" placeholder="Your Phone Number" required>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" value="<?= $user['organization']?>" name="organization" class="pop-up-form-fields" id="inputOrganization" placeholder="Your Organization">
+                            <input type="text" value="<?= $user['organization'] ?>" name="organization" class="pop-up-form-fields" id="inputOrganization" placeholder="Your Organization">
                         </div>
                         <div class="col-md-12 mb-4">
                             <select name="course" class="pop-up-form-fields" id="exampleFormControlSelect1" disabled style="color: #8e989f">
@@ -53,7 +69,7 @@ init_head($title);
                             </select>
                         </div>
                         <div class="col-md-12">
-                            <input type="text" value="<?= $user['hours']?> hours" name="hours" class="pop-up-form-fields" disabled placeholder="How many hours can you dedicate each week">
+                            <input type="text" value="<?= $user['hours'] ?> hours" name="hours" class="pop-up-form-fields" disabled placeholder="How many hours can you dedicate each week">
                         </div>
                         <div class="col-md-12 text-center">
                             <button class="button sign-btn org-btn send-contact">

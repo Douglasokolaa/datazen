@@ -45,12 +45,22 @@ class Home extends BaseController
 		$id = get_logged_in_user_id();
 		$model = new User();
 		$user = $model->find($id);
-
-		$model->save([
-			'id' => $user['id'],
-			'name' => 'John Smith Jr',
-		]);
-
+		if ($this->request->getPost()) {
+			$rules = [
+				'phone' => 'required|min_length[6]',
+				'organization' => 'required|min_length[3]',
+			];
+			if (!$this->validate($rules)) {
+				$data['error_msg'] = $this->validator;
+			} else {
+				$model->save([
+					'id' => $user['id'],
+					'phone' => strip_tags($this->request->getPost('phone')),
+					'organization' => strip_tags($this->request->getPost('organization')),
+				]);
+                $data['success'] = 'Profile updated successfully';
+			}
+		}
 		if (!$user) {
 			return redirect()->to('/logout');
 		}
